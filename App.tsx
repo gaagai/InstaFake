@@ -12,7 +12,7 @@ const App = () => {
       <View style={styles.header}>
         <Image
           source={{
-            uri: 'https://cdn.pixabay.com/photo/2023/04/27/03/59/shadbay-7953707_960_720.jpg',
+            uri: 'https://cdn.pixabay.com/photo/2017/01/31/20/53/robot-2027195_640.png',
           }}
           style={styles.userAvatar as ImageStyle}
         />
@@ -25,31 +25,60 @@ const App = () => {
         }}
         style={styles.image as ImageStyle}
       />
-      <View style={styles.iconsContainer}>
-        <AntDesign
-          name="heart"
-          size={24}
-          style={styles.icon}
-          color={colors.darkGrey}
-        />
-        <Ionicons
-          name="chatbubble-outline"
-          size={24}
-          style={styles.icon}
-          color={colors.darkGrey}
-        />
-        <Feather
-          name="send"
-          size={24}
-          style={styles.icon}
-          color={colors.darkGrey}
-        />
-        <Feather
-          name="bookmark"
-          size={24}
-          style={{marginLeft: 'auto'}}
-          color={colors.darkGrey}
-        />
+      <View style={styles.footer}>
+        <View style={styles.iconsContainer}>
+          <AntDesign
+            name="hearto"
+            size={24}
+            style={styles.icon}
+            color={colors.darkGrey}
+          />
+          <Ionicons
+            name="chatbubble-outline"
+            size={24}
+            style={styles.icon}
+            color={colors.darkGrey}
+          />
+          <Feather
+            name="send"
+            size={24}
+            style={styles.icon}
+            color={colors.darkGrey}
+          />
+          <Feather
+            name="bookmark"
+            size={24}
+            style={{marginLeft: 'auto'}}
+            color={colors.darkGrey}
+          />
+        </View>
+
+        <Text style={styles.text}>
+          Liked by
+          <Text style={styles.bold}> ljshv </Text>
+          and
+          <Text style={styles.bold}> 77 others</Text>
+        </Text>
+        <Text style={styles.text}>
+          <Text style={styles.bold}>fddhjy2</Text> Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Officiis magni molestias eveniet esse
+          ratione dolorem. Voluptatum magnam ipsum alias nesciunt quis numquam
+          iste aliquid? Quia obcaecati ducimus architecto non tempore.
+        </Text>
+        <Text>View all 16 comments</Text>
+        <View style={styles.comment}>
+          <Text style={styles.commentText}>
+            <Text style={styles.bold}>sabrahams33</Text> Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit.
+          </Text>
+          <AntDesign
+            name="hearto"
+            size={14}
+            style={styles.icon}
+            color={colors.darkGrey}
+          />
+        </View>
+        <Text>22 July, 2023</Text>
       </View>
     </View>
   );
@@ -81,10 +110,29 @@ const styles = StyleSheet.create({
   },
   iconsContainer: {
     flexDirection: 'row',
-    padding: 10,
+    marginBottom: 5,
   },
   icon: {
     marginHorizontal: 5,
+  },
+  footer: {
+    padding: 10,
+  },
+  text: {
+    color: colors.darkGrey,
+    lineHeight: 18,
+  },
+  bold: {
+    fontWeight: fonts.weight.bold,
+    color: colors.black,
+  },
+  comment: {
+    color: colors.darkGrey,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  commentText: {
+    color: colors.black,
   },
 });
 
